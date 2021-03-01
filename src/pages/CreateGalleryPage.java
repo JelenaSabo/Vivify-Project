@@ -43,5 +43,22 @@ public class CreateGalleryPage {
 		return driver.findElement(By.xpath("//button[contains(text(),'Cancel')]"));
 	}
 	
+	public void titleInsert(String title) {
+		getTitleField().clear();
+		getTitleField().sendKeys(title);
+	}
 	
+	public void descriptionsInsert(String descriptions) {
+		getDescriptionsField().clear();
+		getDescriptionsField().sendKeys(descriptions);	
+	}
+	
+	public void imagesInsert (String images) {
+		getImagesField().clear();
+		getImagesField().sendKeys(images);
+	}
+	
+	 public void submitClick() {
+	    	getSubmitBtn().click();
+	    }
 }

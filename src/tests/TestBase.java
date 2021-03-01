@@ -38,5 +38,14 @@ public class TestBase {
 		excelReader.wb.close();
 		
 	}
+	public void validLogIn() {
+		mainPage.clickOnLogInBtn();
+		String eMail = excelReader.getCellData("LogIn", 1, 1);
+		String password = excelReader.getCellData("LogIn", 2, 1);
+		logInPage.eMailInsert(eMail);
+		logInPage.passwordInsert(password);
+		logInPage.submitClick();
+		
+	}
 	}
 	

@@ -13,7 +13,12 @@ public class CreateGalleryPage {
 	WebElement addImageBtn;
 	WebElement submitBtn;
 	WebElement cancelBtn;
+	WebElement galleryTitle;
 	
+	public WebElement getGalleryTitle() {
+		return driver.findElement(By.className("box-title"));
+	}
+
 	public CreateGalleryPage(WebDriver driver) {
 		super();
 		this.driver = driver;

@@ -23,7 +23,10 @@ public class CreateGalleryTests extends TestBase {
 		createGalleryPage.imagesInsert(images);
 		createGalleryPage.submitClick();
 		
-		Assert.assertEquals(true, mainPage.getLogOut().isDisplayed());
+		String assertMessage = excelReader.getCellData("CreateGallery", 1, 1);
+		String textForAssert = createGalleryPage.getGalleryTitle().getText();
+		
+		Assert.assertEquals(textForAssert, assertMessage);
 
 		Thread.sleep(3000);
 	}
